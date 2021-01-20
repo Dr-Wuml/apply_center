@@ -1,0 +1,11 @@
+表一 任务列表结构		字段类型	备注
+task_list	指派人assginee	string	
+	类别category	string	类别结构
+	标题subject	string	
+	创建时间create_time	date	
+	完成时间end_time	date	
+	完成时间status	tinyint	1 todo;待办        2 done;已办理      3 deleted;删除
+表二 类别属性结构		字段类型	备注
+cstegory_type_table	名称title	string	
+	排序值sort	int	
+说明：待办事件按照类别聚合，即同一类别的任务在一起，作为一个子列表，每一类别任务子列表按照排序值（sort）排序，内按创建时间从最新到最早排序，支持翻页加载。			
